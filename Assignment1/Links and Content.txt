@@ -1,0 +1,28 @@
+Q-1
+From their resume(haven't checked yet)
+
+Q-2
+http://www.passwordmeter.com/
+http://in.pcmag.com/software/91248/feature/password-protection-how-to-create-strong-passwords
+Q-3
+https://www.amazon.com/gp/help/customer/display.html?nodeId=468496
+http://www.flipkart.com/s/privacypolicy
+http://www.snapdeal.com/page/terms
+Q-4
+Similarity :- Both are Substitution Ciphers
+Difference :- Short vs long key easy to analize and find the key and in second one thougn one can find but difficult than previous one
+
+Why second one is difficult 
+Long key 
+The general conclusions:
+If the key is longer, it is used fewer times in the encryption process, 
+therefore, the attacker can obtain less useful statistics from the cyphertext.
+The ultimate case of this is the one-time pad, which is a key that is at least as long as the message.
+
+Feistel Cipher
+In JAVA
+		
+Q-5
+No,anyone can any sort to information as there is no kind of verification regarding the information and it may be wrong
+Yes ,it is usable as its just a 5-10 minute process
+(Rough) Some match of the information so that he can verify like tell your roll number and then some more info + cctv with time.
