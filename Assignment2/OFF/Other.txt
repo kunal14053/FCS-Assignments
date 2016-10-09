@@ -1,0 +1,33 @@
+# Nmap 7.12 scan initiated Sat Oct  8 12:28:06 2016 as: nmap -sV -O -vv -oN Other.txt 192.168.0.110
+Nmap scan report for 192.168.0.110
+Host is up, received localhost-response (0.000015s latency).
+Scanned at 2016-10-08 12:28:06 IST for 17s
+Not shown: 998 closed ports
+Reason: 998 resets
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X (workgroup: KUNAL-INSPIRON-N5010)
+445/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X (workgroup: KUNAL-INSPIRON-N5010)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.8 - 4.4
+TCP/IP fingerprint:
+OS:SCAN(V=7.12%E=4%D=10/8%OT=139%CT=1%CU=43350%PV=Y%DS=0%DC=L%G=Y%TM=57F899
+OS:0F%P=i686-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=110%TI=Z%CI=I%TS=8)OPS(O1=MF
+OS:FD7ST11NW7%O2=MFFD7ST11NW7%O3=MFFD7NNT11NW7%O4=MFFD7ST11NW7%O5=MFFD7ST11
+OS:NW7%O6=MFFD7ST11)WIN(W1=AAAA%W2=AAAA%W3=AAAA%W4=AAAA%W5=AAAA%W6=AAAA)ECN
+OS:(R=Y%DF=Y%T=40%W=AAAA%O=MFFD7NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=
+OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C
+OS:D=S)
+
+Uptime guess: 0.103 days (since Sat Oct  8 10:00:07 2016)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct  8 12:28:23 2016 -- 1 IP address (1 host up) scanned in 17.73 seconds

@@ -1,0 +1,7 @@
+# Nmap 7.12 scan initiated Sat Oct  8 12:29:54 2016 as: nmap -sW -vv -oN Window.txt 192.168.0.110
+Nmap scan report for 192.168.0.110
+Host is up, received localhost-response (0.000015s latency).
+All 1000 scanned ports on 192.168.0.110 are closed because of 1000 resets
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Oct  8 12:29:56 2016 -- 1 IP address (1 host up) scanned in 2.58 seconds

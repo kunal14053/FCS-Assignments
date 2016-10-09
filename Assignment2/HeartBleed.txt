@@ -1,0 +1,397 @@
+
+Starting Nmap 7.12 ( https://nmap.org ) at 2016-10-01 01:15 IST
+PORTS: Using top 1000 ports found open (TCP:1000, UDP:0, SCTP:0)
+--------------- Timing report ---------------
+  hostgroups: min 1, max 100000
+  rtt-timeouts: init 1000, min 100, max 10000
+  max-scan-delay: TCP 1000, UDP 1000, SCTP 1000
+  parallelism: min 0, max 0
+  max-retries: 10, host-timeout: 0
+  min-rate: 0, max-rate: 0
+---------------------------------------------
+NSE: Using Lua 5.2.
+NSE: Arguments from CLI: vulns.showall
+NSE: Arguments parsed: vulns.showall
+NSE: Loaded 37 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 01:15
+Completed NSE at 01:15, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 01:15
+Completed NSE at 01:15, 0.00s elapsed
+Initiating Ping Scan at 01:15
+Scanning www.google.com (216.58.196.196) [2 ports]
+Completed Ping Scan at 01:15, 0.13s elapsed (1 total hosts)
+Overall sending rates: 15.46 packets / s.
+mass_rdns: Using DNS server 127.0.1.1
+Initiating Parallel DNS resolution of 1 host. at 01:15
+mass_rdns: 0.00s 0/1 [#: 1, OK: 0, NX: 0, DR: 0, SF: 0, TR: 1]
+Completed Parallel DNS resolution of 1 host. at 01:15, 0.00s elapsed
+DNS resolution of 1 IPs took 0.00s. Mode: Async [#: 1, OK: 1, NX: 0, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 01:15
+Scanning www.google.com (216.58.196.196) [1000 ports]
+Discovered open port 53/tcp on 216.58.196.196
+Discovered open port 443/tcp on 216.58.196.196
+Discovered open port 80/tcp on 216.58.196.196
+Completed Connect Scan at 01:15, 9.28s elapsed (1000 total ports)
+Overall sending rates: 215.74 packets / s.
+Initiating Service scan at 01:15
+Scanning 3 services on www.google.com (216.58.196.196)
+Completed Service scan at 01:16, 76.85s elapsed (3 services on 1 host)
+NSE: Script scanning 216.58.196.196.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 01:16
+NSE: Starting skypev2-version against www.google.com (216.58.196.196:443).
+NSE: Finished skypev2-version against www.google.com (216.58.196.196:443).
+NSE: Starting skypev2-version against www.google.com (216.58.196.196:80).
+NSE: Finished skypev2-version against www.google.com (216.58.196.196:80).
+NSE: Starting http-server-header against www.google.com (216.58.196.196:443).
+NSE: Starting http-server-header against www.google.com (216.58.196.196:80).
+NSE: Starting ssl-heartbleed against www.google.com (216.58.196.196:443).
+NSE: Starting weblogic-t3-info against www.google.com (216.58.196.196:80).
+NSE: Finished http-server-header against www.google.com (216.58.196.196:80).
+NSE: Finished weblogic-t3-info against www.google.com (216.58.196.196:80).
+NSE: [ssl-heartbleed 216.58.196.196:443] we're done!
+NSE: [ssl-heartbleed 216.58.196.196:443] Server does not support TLS Heartbeat Requests.
+NSE: Finished http-server-header against www.google.com (216.58.196.196:443).
+NSE: [ssl-heartbleed 216.58.196.196:443] we're done!
+NSE: [ssl-heartbleed 216.58.196.196:443] Server does not support TLS Heartbeat Requests.
+NSE: [ssl-heartbleed 216.58.196.196:443] we're done!
+NSE: [ssl-heartbleed 216.58.196.196:443] Server does not support TLS Heartbeat Requests.
+NSE: Finished ssl-heartbleed against www.google.com (216.58.196.196:443).
+Completed NSE at 01:16, 1.24s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 01:16
+Completed NSE at 01:16, 0.00s elapsed
+Nmap scan report for www.google.com (216.58.196.196)
+Host is up, received syn-ack (0.10s latency).
+Other addresses for www.google.com (not scanned): 2404:6800:4001:808::2004
+rDNS record for 216.58.196.196: kul06s14-in-f4.1e100.net
+Scanned at 2016-10-01 01:15:08 IST for 88s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT    STATE SERVICE   REASON  VERSION
+53/tcp  open  domain    syn-ack
+80/tcp  open  http      syn-ack
+443/tcp open  ssl/https syn-ack
+| ssl-heartbleed: 
+|   NOT VULNERABLE:
+|   The Heartbleed Bug is a serious vulnerability in the popular OpenSSL cryptographic software library. It allows for stealing information intended to be protected by SSL/TLS encryption.
+|     State: NOT VULNERABLE
+|     References:
+|       http://www.openssl.org/news/secadv_20140407.txt 
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0160
+|_      http://cvedetails.com/cve/2014-0160/
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.12%I=7%D=10/1%Time=57EEC0D4%P=i686-pc-linux-gnu%r(GetReq
+SF:uest,1DD,"HTTP/1\.0\x20302\x20Found\r\nCache-Control:\x20private\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=UTF-8\r\nLocation:\x20http://www\.g
+SF:oogle\.co\.in/\?gfe_rd=cr&ei=1MDuV8LADavR8Afwg4HACw\r\nContent-Length:\
+SF:x20261\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:24\x20GMT\r\n\r\n
+SF:<HTML><HEAD><meta\x20http-equiv=\"content-type\"\x20content=\"text/html
+SF:;charset=utf-8\">\n<TITLE>302\x20Moved</TITLE></HEAD><BODY>\n<H1>302\x2
+SF:0Moved</H1>\nThe\x20document\x20has\x20moved\n<A\x20HREF=\"http://www\.
+SF:google\.co\.in/\?gfe_rd=cr&amp;ei=1MDuV8LADavR8Afwg4HACw\">here</A>\.\r
+SF:\n</BODY></HTML>\r\n")%r(HTTPOptions,6BE,"HTTP/1\.0\x20405\x20Method\x2
+SF:0Not\x20Allowed\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nCont
+SF:ent-Length:\x201592\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:24\x
+SF:20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20ch
+SF:arset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial-scale
+SF:=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>Error\
+SF:x20405\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x20\x20<style>\n\x2
+SF:0\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sa
+SF:ns-serif}html{background:#fff;color:#222;padding:15px}body{margin:7%\x2
+SF:0auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x2015px}\
+SF:*\x20>\x20body{background:url\(//www\.google\.com/images/errors/robot\.
+SF:png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x20
+SF:0\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20img{
+SF:border:0}@media\x20screen\x20and\x20\(max-width:772px\){body{background
+SF::none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url
+SF:\(//www\.google\.com/images/branding/googlelogo/1x/googlelogo_color_150
+SF:x54dp\.png\)\x20no-repeat;margin-left:-5px}@media\x20only\x20screen\x20
+SF:and\x20\(min-resolution:192dpi\){#logo{background:url\(//www\.google\.c
+SF:om/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x20no
+SF:-repeat\x200%\x200%/100%\x20100%;-moz-border-image:url\(//www\.google\.
+SF:com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x200
+SF:}}@media\x20only\x20screen\x20and\x20\(-webkit-min-device-pixel-ratio:2
+SF:\){#logo{background:url\(//w")%r(RTSPRequest,692,"HTTP/1\.0\x20400\x20B
+SF:ad\x20Request\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nConten
+SF:t-Length:\x201555\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:24\x20
+SF:GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20char
+SF:set=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial-scale=1
+SF:,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>Error\x2
+SF:0400\x20\(Bad\x20Request\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x2
+SF:0\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-serif}htm
+SF:l{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\x200;m
+SF:ax-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20>\x20bo
+SF:dy{background:url\(//www\.google\.com/images/errors/robot\.png\)\x20100
+SF:%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x2022px;ov
+SF:erflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border:0}@me
+SF:dia\x20screen\x20and\x20\(max-width:772px\){body{background:none;margin
+SF:-top:0;max-width:none;padding-right:0}}#logo{background:url\(//www\.goo
+SF:gle\.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp\.png\)
+SF:\x20no-repeat;margin-left:-5px}@media\x20only\x20screen\x20and\x20\(min
+SF:-resolution:192dpi\){#logo{background:url\(//www\.google\.com/images/br
+SF:anding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x20no-repeat\x200
+SF:%\x200%/100%\x20100%;-moz-border-image:url\(//www\.google\.com/images/b
+SF:randing/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x200}}@media\x20
+SF:only\x20screen\x20and\x20\(-webkit-min-device-pixel-ratio:2\){#logo{bac
+SF:kground:url\(//www\.google\.com/")%r(FourOhFourRequest,6B3,"HTTP/1\.0\x
+SF:20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r
+SF:\nContent-Length:\x201590\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:4
+SF:5:29\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta
+SF:\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial
+SF:-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>
+SF:Error\x20404\x20\(Not\x20Found\)!!1</title>\n\x20\x20<style>\n\x20\x20\
+SF:x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-ser
+SF:if}html{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\
+SF:x200;max-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20>
+SF:\x20body{background:url\(//www\.google\.com/images/errors/robot\.png\)\
+SF:x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x202
+SF:2px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border
+SF::0}@media\x20screen\x20and\x20\(max-width:772px\){body{background:none;
+SF:margin-top:0;max-width:none;padding-right:0}}#logo{background:url\(//ww
+SF:w\.google\.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp\
+SF:.png\)\x20no-repeat;margin-left:-5px}@media\x20only\x20screen\x20and\x2
+SF:0\(min-resolution:192dpi\){#logo{background:url\(//www\.google\.com/ima
+SF:ges/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x20no-repea
+SF:t\x200%\x200%/100%\x20100%;-moz-border-image:url\(//www\.google\.com/im
+SF:ages/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x200}}@med
+SF:ia\x20only\x20screen\x20and\x20\(-webkit-min-device-pixel-ratio:2\){#lo
+SF:go{background:url\(//www\.google\.com/imag")%r(DNSVersionBindReq,B3,"HT
+SF:TP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nContent-Ty
+SF:pe:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x20201
+SF:6\x2019:45:40\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Reque
+SF:st\)!!1</title></html>")%r(DNSStatusRequest,B3,"HTTP/1\.0\x20400\x20Bad
+SF:\x20Request\r\nContent-Length:\x2054\r\nContent-Type:\x20text/html;\x20
+SF:charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:40\x20GMT\
+SF:r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1</title></html
+SF:>")%r(Help,692,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/html;\x20charset=UTF-8\r\nContent-Length:\x201555\r\nDate:\x20Fri,
+SF:\x2030\x20Sep\x202016\x2019:45:40\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<ht
+SF:ml\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=
+SF:viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20width=dev
+SF:ice-width\">\n\x20\x20<title>Error\x20400\x20\(Bad\x20Request\)!!1</tit
+SF:le>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{f
+SF:ont:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;paddi
+SF:ng:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;pa
+SF:dding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.
+SF:com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-righ
+SF:t:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-
+SF:decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-widt
+SF:h:772px\){body{background:none;margin-top:0;max-width:none;padding-righ
+SF:t:0}}#logo{background:url\(//www\.google\.com/images/branding/googlelog
+SF:o/1x/googlelogo_color_150x54dp\.png\)\x20no-repeat;margin-left:-5px}@me
+SF:dia\x20only\x20screen\x20and\x20\(min-resolution:192dpi\){#logo{backgro
+SF:und:url\(//www\.google\.com/images/branding/googlelogo/2x/googlelogo_co
+SF:lor_150x54dp\.png\)\x20no-repeat\x200%\x200%/100%\x20100%;-moz-border-i
+SF:mage:url\(//www\.google\.com/images/branding/googlelogo/2x/googlelogo_c
+SF:olor_150x54dp\.png\)\x200}}@media\x20only\x20screen\x20and\x20\(-webkit
+SF:-min-device-pixel-ratio:2\){#logo{background:url\(//www\.google\.com/")
+SF:%r(SSLSessionReq,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Leng
+SF:th:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20F
+SF:ri,\x2030\x20Sep\x202016\x2019:45:41\x20GMT\r\n\r\n<html><title>Error\x
+SF:20400\x20\(Bad\x20Request\)!!1</title></html>")%r(TLSSessionReq,B3,"HTT
+SF:P/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nContent-Typ
+SF:e:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016
+SF:\x2019:45:41\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Reques
+SF:t\)!!1</title></html>")%r(Kerberos,B3,"HTTP/1\.0\x20400\x20Bad\x20Reque
+SF:st\r\nContent-Length:\x2054\r\nContent-Type:\x20text/html;\x20charset=U
+SF:TF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:41\x20GMT\r\n\r\n<h
+SF:tml><title>Error\x20400\x20\(Bad\x20Request\)!!1</title></html>")%r(SMB
+SF:ProgNeg,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054
+SF:\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030
+SF:\x20Sep\x202016\x2019:45:41\x20GMT\r\n\r\n<html><title>Error\x20400\x20
+SF:\(Bad\x20Request\)!!1</title></html>")%r(LPDString,B3,"HTTP/1\.0\x20400
+SF:\x20Bad\x20Request\r\nContent-Length:\x2054\r\nContent-Type:\x20text/ht
+SF:ml;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:42\
+SF:x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1</title
+SF:></html>")%r(SIPOptions,692,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x201555\r\n
+SF:Date:\x20Fri,\x2030\x20Sep\x202016\x2019:45:47\x20GMT\r\n\r\n<!DOCTYPE\
+SF:x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<
+SF:meta\x20name=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,
+SF:\x20width=device-width\">\n\x20\x20<title>Error\x20400\x20\(Bad\x20Requ
+SF:est\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:
+SF:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;col
+SF:or:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-he
+SF:ight:180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//
+SF:www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat
+SF:;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{col
+SF:or:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\
+SF:x20\(max-width:772px\){body{background:none;margin-top:0;max-width:none
+SF:;padding-right:0}}#logo{background:url\(//www\.google\.com/images/brand
+SF:ing/googlelogo/1x/googlelogo_color_150x54dp\.png\)\x20no-repeat;margin-
+SF:left:-5px}@media\x20only\x20screen\x20and\x20\(min-resolution:192dpi\){
+SF:#logo{background:url\(//www\.google\.com/images/branding/googlelogo/2x/
+SF:googlelogo_color_150x54dp\.png\)\x20no-repeat\x200%\x200%/100%\x20100%;
+SF:-moz-border-image:url\(//www\.google\.com/images/branding/googlelogo/2x
+SF:/googlelogo_color_150x54dp\.png\)\x200}}@media\x20only\x20screen\x20and
+SF:\x20\(-webkit-min-device-pixel-ratio:2\){#logo{background:url\(//www\.g
+SF:oogle\.com/");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.12%T=SSL%I=7%D=10/1%Time=57EEC0DA%P=i686-pc-linux-gnu%r
+SF:(GetRequest,215,"HTTP/1\.0\x20302\x20Found\r\nCache-Control:\x20private
+SF:\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nLocation:\x20https:
+SF://www\.google\.co\.in/\?gfe_rd=cr&ei=2sDuV9vfKK_R8AeE7YHYCQ\r\nContent-
+SF:Length:\x20262\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:30\x20GMT
+SF:\r\nAlt-Svc:\x20quic=\":443\";\x20ma=2592000;\x20v=\"36,35,34,33,32\"\r
+SF:\n\r\n<HTML><HEAD><meta\x20http-equiv=\"content-type\"\x20content=\"tex
+SF:t/html;charset=utf-8\">\n<TITLE>302\x20Moved</TITLE></HEAD><BODY>\n<H1>
+SF:302\x20Moved</H1>\nThe\x20document\x20has\x20moved\n<A\x20HREF=\"https:
+SF://www\.google\.co\.in/\?gfe_rd=cr&amp;ei=2sDuV9vfKK_R8AeE7YHYCQ\">here<
+SF:/A>\.\r\n</BODY></HTML>\r\n")%r(HTTPOptions,6F4,"HTTP/1\.0\x20405\x20Me
+SF:thod\x20Not\x20Allowed\r\nContent-Type:\x20text/html;\x20charset=UTF-8\
+SF:r\nContent-Length:\x201592\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:
+SF:45:31\x20GMT\r\nAlt-Svc:\x20quic=\":443\";\x20ma=2592000;\x20v=\"36,35,
+SF:34,33,32\"\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\
+SF:x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial-
+SF:scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>E
+SF:rror\x20405\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x20\x20<style>
+SF:\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20ari
+SF:al,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:
+SF:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x201
+SF:5px}\*\x20>\x20body{background:url\(//www\.google\.com/images/errors/ro
+SF:bot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11p
+SF:x\x200\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a\x2
+SF:0img{border:0}@media\x20screen\x20and\x20\(max-width:772px\){body{backg
+SF:round:none;margin-top:0;max-width:none;padding-right:0}}#logo{backgroun
+SF:d:url\(//www\.google\.com/images/branding/googlelogo/1x/googlelogo_colo
+SF:r_150x54dp\.png\)\x20no-repeat;margin-left:-5px}@media\x20only\x20scree
+SF:n\x20and\x20\(min-resolution:192dpi\){#logo{background:url\(//www\.goog
+SF:le\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\
+SF:x20no-repeat\x200%\x200%/100%\x20100%;-moz-border-image:url\(//www\.goo
+SF:gle\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)
+SF:\x200}}@media\x20only\x20screen\x20and\x20\(-web")%r(FourOhFourRequest,
+SF:6E9,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x2
+SF:0charset=UTF-8\r\nContent-Length:\x201590\r\nDate:\x20Fri,\x2030\x20Sep
+SF:\x202016\x2019:45:31\x20GMT\r\nAlt-Svc:\x20quic=\":443\";\x20ma=2592000
+SF:;\x20v=\"36,35,34,33,32\"\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\
+SF:n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20con
+SF:tent=\"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\
+SF:x20\x20<title>Error\x20404\x20\(Not\x20Found\)!!1</title>\n\x20\x20<sty
+SF:le>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20
+SF:arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{marg
+SF:in:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x
+SF:2015px}\*\x20>\x20body{background:url\(//www\.google\.com/images/errors
+SF:/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:
+SF:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a
+SF:\x20img{border:0}@media\x20screen\x20and\x20\(max-width:772px\){body{ba
+SF:ckground:none;margin-top:0;max-width:none;padding-right:0}}#logo{backgr
+SF:ound:url\(//www\.google\.com/images/branding/googlelogo/1x/googlelogo_c
+SF:olor_150x54dp\.png\)\x20no-repeat;margin-left:-5px}@media\x20only\x20sc
+SF:reen\x20and\x20\(min-resolution:192dpi\){#logo{background:url\(//www\.g
+SF:oogle\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png
+SF:\)\x20no-repeat\x200%\x200%/100%\x20100%;-moz-border-image:url\(//www\.
+SF:google\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.pn
+SF:g\)\x200}}@media\x20only\x20screen\x20and\x20\(-webkit-min-device-pix")
+SF:%r(tor-versions,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Lengt
+SF:h:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fr
+SF:i,\x2030\x20Sep\x202016\x2019:45:37\x20GMT\r\n\r\n<html><title>Error\x2
+SF:0400\x20\(Bad\x20Request\)!!1</title></html>")%r(RTSPRequest,692,"HTTP/
+SF:1\.0\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset
+SF:=UTF-8\r\nContent-Length:\x201555\r\nDate:\x20Fri,\x2030\x20Sep\x202016
+SF:\x2019:45:42\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\
+SF:x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\
+SF:"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x2
+SF:0<title>Error\x20400\x20\(Bad\x20Request\)!!1</title>\n\x20\x20<style>\
+SF:n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20aria
+SF:l,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7
+SF:%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\x200\x2015
+SF:px}\*\x20>\x20body{background:url\(//www\.google\.com/images/errors/rob
+SF:ot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px
+SF:\x200\x2022px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20
+SF:img{border:0}@media\x20screen\x20and\x20\(max-width:772px\){body{backgr
+SF:ound:none;margin-top:0;max-width:none;padding-right:0}}#logo{background
+SF::url\(//www\.google\.com/images/branding/googlelogo/1x/googlelogo_color
+SF:_150x54dp\.png\)\x20no-repeat;margin-left:-5px}@media\x20only\x20screen
+SF:\x20and\x20\(min-resolution:192dpi\){#logo{background:url\(//www\.googl
+SF:e\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\x
+SF:20no-repeat\x200%\x200%/100%\x20100%;-moz-border-image:url\(//www\.goog
+SF:le\.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp\.png\)\
+SF:x200}}@media\x20only\x20screen\x20and\x20\(-webkit-min-device-pixel-rat
+SF:io:2\){#logo{background:url\(//www\.google\.com/")%r(DNSVersionBindReq,
+SF:B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nCont
+SF:ent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\
+SF:x202016\x2019:45:48\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x2
+SF:0Request\)!!1</title></html>")%r(DNSStatusRequest,B3,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nContent-Length:\x2054\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:49\x
+SF:20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1</title>
+SF:</html>")%r(Help,692,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Typ
+SF:e:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x201555\r\nDate:\x
+SF:20Fri,\x2030\x20Sep\x202016\x2019:45:49\x20GMT\r\n\r\n<!DOCTYPE\x20html
+SF:>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x2
+SF:0name=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20wid
+SF:th=device-width\">\n\x20\x20<title>Error\x20400\x20\(Bad\x20Request\)!!
+SF:1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,
+SF:code{font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222
+SF:;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:18
+SF:0px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.go
+SF:ogle\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;paddin
+SF:g-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777
+SF:;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(ma
+SF:x-width:772px\){body{background:none;margin-top:0;max-width:none;paddin
+SF:g-right:0}}#logo{background:url\(//www\.google\.com/images/branding/goo
+SF:glelogo/1x/googlelogo_color_150x54dp\.png\)\x20no-repeat;margin-left:-5
+SF:px}@media\x20only\x20screen\x20and\x20\(min-resolution:192dpi\){#logo{b
+SF:ackground:url\(//www\.google\.com/images/branding/googlelogo/2x/googlel
+SF:ogo_color_150x54dp\.png\)\x20no-repeat\x200%\x200%/100%\x20100%;-moz-bo
+SF:rder-image:url\(//www\.google\.com/images/branding/googlelogo/2x/google
+SF:logo_color_150x54dp\.png\)\x200}}@media\x20only\x20screen\x20and\x20\(-
+SF:webkit-min-device-pixel-ratio:2\){#logo{background:url\(//www\.google\.
+SF:com/")%r(SSLSessionReq,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nConten
+SF:t-Length:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate
+SF::\x20Fri,\x2030\x20Sep\x202016\x2019:45:49\x20GMT\r\n\r\n<html><title>E
+SF:rror\x20400\x20\(Bad\x20Request\)!!1</title></html>")%r(TLSSessionReq,B
+SF:3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x
+SF:202016\x2019:45:50\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20
+SF:Request\)!!1</title></html>")%r(Kerberos,B3,"HTTP/1\.0\x20400\x20Bad\x2
+SF:0Request\r\nContent-Length:\x2054\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:45:50\x20GMT\r\n
+SF:\r\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1</title></html>")
+SF:%r(SMBProgNeg,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:
+SF:\x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Fri,
+SF:\x2030\x20Sep\x202016\x2019:45:51\x20GMT\r\n\r\n<html><title>Error\x204
+SF:00\x20\(Bad\x20Request\)!!1</title></html>")%r(LPDString,B3,"HTTP/1\.0\
+SF:x20400\x20Bad\x20Request\r\nContent-Length:\x2054\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=UTF-8\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:
+SF:46:01\x20GMT\r\n\r\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1<
+SF:/title></html>")%r(SIPOptions,692,"HTTP/1\.0\x20400\x20Bad\x20Request\r
+SF:\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x2015
+SF:55\r\nDate:\x20Fri,\x2030\x20Sep\x202016\x2019:46:07\x20GMT\r\n\r\n<!DO
+SF:CTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x2
+SF:0\x20<meta\x20name=viewport\x20content=\"initial-scale=1,\x20minimum-sc
+SF:ale=1,\x20width=device-width\">\n\x20\x20<title>Error\x20400\x20\(Bad\x
+SF:20Request\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;pa
+SF:dding:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#f
+SF:ff;color:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;
+SF:min-height:180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:u
+SF:rl\(//www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-
+SF:repeat;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}i
+SF:ns{color:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x
+SF:20and\x20\(max-width:772px\){body{background:none;margin-top:0;max-widt
+SF:h:none;padding-right:0}}#logo{background:url\(//www\.google\.com/images
+SF:/branding/googlelogo/1x/googlelogo_color_150x54dp\.png\)\x20no-repeat;m
+SF:argin-left:-5px}@media\x20only\x20screen\x20and\x20\(min-resolution:192
+SF:dpi\){#logo{background:url\(//www\.google\.com/images/branding/googlelo
+SF:go/2x/googlelogo_color_150x54dp\.png\)\x20no-repeat\x200%\x200%/100%\x2
+SF:0100%;-moz-border-image:url\(//www\.google\.com/images/branding/googlel
+SF:ogo/2x/googlelogo_color_150x54dp\.png\)\x200}}@media\x20only\x20screen\
+SF:x20and\x20\(-webkit-min-device-pixel-ratio:2\){#logo{background:url\(//
+SF:www\.google\.com/");
+Final times for host: srtt: 103690 rttvar: 21066  to: 187954
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 01:16
+Completed NSE at 01:16, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 01:16
+Completed NSE at 01:16, 0.00s elapsed
+Read from /usr/bin/../share/nmap: nmap-payloads nmap-service-probes nmap-services.
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 88.40 seconds

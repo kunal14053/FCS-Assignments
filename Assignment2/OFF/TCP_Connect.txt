@@ -1,0 +1,12 @@
+# Nmap 7.12 scan initiated Sat Oct  8 12:34:18 2016 as: nmap -sT -vv -oN TCP_Connect.txt 192.168.0.110
+Nmap scan report for 192.168.0.110
+Host is up, received localhost-response (0.00013s latency).
+Scanned at 2016-10-08 12:34:18 IST for 0s
+Not shown: 998 closed ports
+Reason: 998 conn-refused
+PORT    STATE SERVICE      REASON
+139/tcp open  netbios-ssn  syn-ack
+445/tcp open  microsoft-ds syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Oct  8 12:34:18 2016 -- 1 IP address (1 host up) scanned in 0.09 seconds

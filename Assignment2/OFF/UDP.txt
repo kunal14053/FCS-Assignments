@@ -1,0 +1,15 @@
+# Nmap 7.12 scan initiated Sat Oct  8 12:29:03 2016 as: nmap -sU -vv -oN UDP.txt 192.168.0.110
+Nmap scan report for 192.168.0.110
+Host is up, received localhost-response (0.000016s latency).
+Scanned at 2016-10-08 12:29:03 IST for 4s
+Not shown: 995 closed ports
+Reason: 995 port-unreaches
+PORT     STATE         SERVICE     REASON
+68/udp   open|filtered dhcpc       no-response
+137/udp  open          netbios-ns  udp-response ttl 64
+138/udp  open|filtered netbios-dgm no-response
+631/udp  open|filtered ipp         no-response
+5353/udp open|filtered zeroconf    no-response
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Oct  8 12:29:07 2016 -- 1 IP address (1 host up) scanned in 3.64 seconds

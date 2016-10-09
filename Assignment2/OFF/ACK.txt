@@ -1,0 +1,7 @@
+# Nmap 7.12 scan initiated Sat Oct  8 12:30:47 2016 as: nmap -sA -vv -oN ACK.txt 192.168.0.110
+Nmap scan report for 192.168.0.110
+Host is up, received localhost-response (0.000014s latency).
+All 1000 scanned ports on 192.168.0.110 are unfiltered because of 1000 resets
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Oct  8 12:30:49 2016 -- 1 IP address (1 host up) scanned in 2.57 seconds
